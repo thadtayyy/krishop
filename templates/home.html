@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <br>
+    {% for item in items %}
+        <div class="card" style="width: 18rem;">
+            <img src="{{ url_for('static', filename='image-placeholder.png') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ item.name }}</h5>
+              <p class="card-text">{{ item.price }}</p>
+              <p class="card-text">{{ item.store }}</p>
+              <a href="#" class="btn btn-primary">Buy</a>
+            </div>
+        </div>
+    <br>
+    {% endfor %}
+{% endblock content %}
